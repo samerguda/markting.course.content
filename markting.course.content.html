@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Course Components</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">مكونات كورس ديجيتال ماركتنج</h2>
+<h2 style="text-align: center;color: blue;">   - مقدمة  - استراتجيات - سيو - سيم - تواصل اجتماعي - بريد- محتوي -التحلي  التجارة  العلاقات-  اعلانات     </h2>
+<h2 style="text-align: center;color: rgb(255, 68, 0);">  ماسس تبمت تعا    </h2>
+
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>المكون</th>
+        <th>التفاصيل</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>مقدمة في التسويق الرقمي</td>
+        <td>تعريف التسويق الرقمي، أهمية التسويق الرقمي في الأعمال اليوم</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>استراتيجيات التسويق الرقمي</td>
+        <td>تطوير استراتيجيات التسويق الرقمي، فهم الجمهور المستهدف، تحليل المنافسين</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>تحسين محركات البحث (SEO)</td>
+        <td>أساسيات SEO، تقنيات تحسين المحتوى، بناء الروابط، الأدوات المستخدمة في SEO</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>التسويق عبر محركات البحث (SEM)</td>
+        <td>إعلانات جوجل (Google Ads)، استراتيجيات الدفع لكل نقرة (PPC)، قياس أداء الحملات</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>التسويق عبر وسائل التواصل الاجتماعي</td>
+        <td>استراتيجيات التسويق على منصات التواصل الاجتماعي، إدارة الحملات الإعلانية على الفيسبوك، إنستغرام، تويتر، لينكدإن وغيرها، تحليل وقياس الأداء على وسائل التواصل الاجتماعي</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>التسويق عبر البريد الإلكتروني</td>
+        <td>بناء قوائم البريد الإلكتروني، إنشاء حملات البريد الإلكتروني الفعّالة، قياس وتحليل أداء الحملات</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>المحتوى التسويقي (Content Marketing)</td>
+        <td>كتابة وإنشاء المحتوى، استراتيجيات توزيع المحتوى، التدوين والبودكاست والفيديوهات</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>التحليل والقياس</td>
+        <td>أدوات تحليل البيانات (مثل Google Analytics)، تحليل أداء الحملات، تقرير الأداء والتوصيات</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>التجارة الإلكترونية</td>
+        <td>استراتيجيات البيع عبر الإنترنت، إدارة المتاجر الإلكترونية، تحسين تجربة المستخدم</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>إدارة العلاقات مع العملاء (CRM)</td>
+        <td>استخدام أنظمة CRM، تحليل سلوك العملاء، استراتيجيات الاحتفاظ بالعملاء</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>الإعلانات الرقمية</td>
+        <td>أنواع الإعلانات الرقمية (البنرات، الفيديوهات، الإعلانات المدفوعة)، استراتيجيات الإعلان عبر الإنترنت، إدارة الميزانية الإعلانية</td>
+    </tr>
+</table>
+
+<button class="copy-button" onclick="copyTable()">Copy</button>
+<button class="whatsapp-button" onclick="sendWhatsApp()">Send via WhatsApp</button>
+
+<script>
+    function copyTable() {
+        const range = document.createRange();
+        range.selectNode(document.querySelector("table"));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        alert("Table copied to clipboard!");
+    }
+
+    function sendWhatsApp() {
+        const tableText = document.querySelector("table").innerText;
+        const whatsappURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(tableText)}`;
+        window.open(whatsappURL, '_blank');
+    }
+</script>
+
+</body>
+</html>
